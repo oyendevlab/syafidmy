@@ -727,6 +727,346 @@
     }
 
     /* ══════════════════════
+       PROJEK BARU — Agentic RPH (dark spotlight)
+    ══════════════════════ */
+    .proj-spotlight {
+      background: #000;
+      color: #fafafa;
+      padding: clamp(4rem, 10vw, 6.75rem) 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .proj-spot-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 3rem);
+    }
+    .proj-spot-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(260px, 440px);
+      gap: clamp(2rem, 5vw, 3.5rem);
+      align-items: center;
+    }
+    .proj-spot-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .14em;
+      color: #5eead4;
+      padding: .35rem .85rem;
+      border-radius: 99px;
+      border: 1px solid rgba(45, 212, 191, 0.45);
+      box-shadow: 0 0 20px rgba(45, 212, 191, 0.12);
+      margin-bottom: 1.35rem;
+    }
+    .proj-spot-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #2dd4bf;
+      box-shadow: 0 0 10px #2dd4bf;
+      flex-shrink: 0;
+    }
+    .proj-spot-h2 {
+      font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.12;
+      margin-bottom: 1.1rem;
+    }
+    .proj-spot-h2-accent {
+      color: #2dd4bf;
+      display: inline;
+    }
+    .proj-spot-desc {
+      font-size: .95rem;
+      line-height: 1.75;
+      color: rgba(250, 250, 250, 0.62);
+      max-width: 34rem;
+      margin-bottom: 1.85rem;
+    }
+    .proj-spot-desc strong { color: rgba(250, 250, 250, 0.92); font-weight: 600; }
+    .proj-spot-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem 1.5rem;
+      margin-bottom: 1.85rem;
+      max-width: 36rem;
+    }
+    .proj-spot-stat {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+    }
+    .proj-spot-stat-ico {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .proj-spot-stat-ico svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .proj-spot-stat-ico.ps-ico-green {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+    }
+    .proj-spot-stat-ico.ps-ico-blue {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+    }
+    .proj-spot-stat-num {
+      font-size: clamp(1.5rem, 2.8vw, 1.85rem);
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.1;
+      color: #fff;
+    }
+    .proj-spot-stat-lbl {
+      font-size: .72rem;
+      color: rgba(250, 250, 250, 0.45);
+      line-height: 1.45;
+      margin-top: .2rem;
+    }
+    .proj-spot-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .72rem 1.35rem;
+      border-radius: 99px;
+      background: #fff;
+      color: #0a0a0a;
+      font-size: .88rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -.02em;
+      transition: transform .25s var(--ease), box-shadow .25s;
+      box-shadow: 0 4px 24px rgba(255, 255, 255, 0.12);
+    }
+    .proj-spot-cta:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 32px rgba(255, 255, 255, 0.18);
+    }
+    .proj-spot-visual { position: relative; }
+    .proj-spot-float-wrap {
+      position: relative;
+      isolation: isolate;
+      padding: 0 0.35rem 0 0;
+      overflow: visible;
+    }
+    @keyframes projPillDrift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(2px, -5px); }
+    }
+    @keyframes projPillShine {
+      from { transform: translateX(-70%); }
+      to { transform: translateX(70%); }
+    }
+    .proj-spot-pill {
+      position: absolute;
+      z-index: 4;
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      max-width: min(248px, 82vw);
+      padding: .48rem .9rem;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: -.015em;
+      line-height: 1.25;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      isolation: isolate;
+      animation: projPillDrift 5s ease-in-out infinite;
+      transition: transform .25s var(--ease), border-color .2s, box-shadow .25s;
+    }
+    .proj-spot-pill--a {
+      top: 0.2rem;
+      right: 0;
+      background: linear-gradient(135deg, #c8f1e3 0%, #b8e8dc 100%);
+      color: #0f3d32;
+      animation-delay: 0s;
+    }
+    .proj-spot-pill--b {
+      bottom: 0.2rem;
+      right: 0;
+      background: linear-gradient(135deg, #fce7f3 0%, #e9d5ff 100%);
+      color: #5b2670;
+      animation-delay: .8s;
+    }
+    .proj-spot-pill:hover {
+      transform: scale(1.04);
+      border-color: rgba(15, 23, 42, 0.12);
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.22);
+    }
+    .proj-spot-pill--a:hover,
+    .proj-spot-pill--b:hover { animation-play-state: paused; }
+    .proj-spot-pill::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(
+        105deg,
+        transparent 0%,
+        transparent 38%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 62%,
+        transparent 100%
+      );
+      opacity: 0;
+      transform: translateX(-50%);
+      pointer-events: none;
+      z-index: 1;
+      transition: opacity .2s;
+    }
+    .proj-spot-pill:hover::after {
+      opacity: 1;
+      animation: projPillShine .75s ease-out forwards;
+    }
+    .proj-spot-pill-ico {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .proj-spot-pill-ico svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .proj-spot-pill span:last-child { position: relative; z-index: 2; }
+    .proj-spot-browser {
+      position: relative;
+      z-index: 2;
+      margin-top: 3.25rem;
+      margin-bottom: 3rem;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #12141c;
+      box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.25),
+        0 28px 70px rgba(0, 0, 0, 0.55);
+    }
+    .proj-spot-chrome-top {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .55rem .65rem;
+      background: #1c1f2a;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .proj-spot-traffic { display: flex; gap: 5px; flex-shrink: 0; }
+    .proj-spot-traffic span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+    }
+    .proj-spot-traffic span:nth-child(1) { background: #ff5f57; }
+    .proj-spot-traffic span:nth-child(2) { background: #febc2e; }
+    .proj-spot-traffic span:nth-child(3) { background: #28c840; }
+    .proj-spot-tab {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      padding: .28rem .5rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: .58rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.75);
+    }
+    .proj-spot-tab svg {
+      width: 11px;
+      height: 11px;
+      stroke: rgba(255, 255, 255, 0.5);
+      fill: none;
+      stroke-width: 2;
+    }
+    .proj-spot-url {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      margin: 0 .65rem .55rem;
+      padding: .38rem .55rem;
+      border-radius: 8px;
+      background: #0d0f14;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-family: var(--mono);
+      font-size: .52rem;
+      color: rgba(250, 250, 250, 0.45);
+    }
+    .proj-spot-url-lock {
+      width: 10px;
+      height: 10px;
+      color: rgba(250, 250, 250, 0.35);
+      flex-shrink: 0;
+    }
+    .proj-spot-shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .proj-spot-chrome-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .5rem;
+      padding: .45rem .65rem;
+      background: #161922;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: .55rem;
+    }
+    .proj-spot-foot-pill {
+      font-family: var(--mono);
+      padding: .2rem .5rem;
+      border-radius: 99px;
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+      letter-spacing: .03em;
+    }
+    .proj-spot-foot-store {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      color: rgba(250, 250, 250, 0.4);
+    }
+    .proj-spot-foot-store svg { width: 11px; height: 11px; color: #4ade80; flex-shrink: 0; }
+    @media (max-width: 900px) {
+      .proj-spot-grid { grid-template-columns: 1fr; }
+      .proj-spot-stats { grid-template-columns: 1fr; }
+      .proj-spot-browser { margin-top: 2.75rem; margin-bottom: 2.5rem; }
+      .proj-spot-pill--a { top: 0.1rem; right: 0; max-width: min(92%, 260px); }
+      .proj-spot-pill--b { bottom: 0.1rem; right: 0; max-width: min(92%, 260px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .proj-spot-pill { animation: none; }
+      .proj-spot-pill:hover::after { animation: none; opacity: 0.25; transform: none; }
+    }
+
+    /* ══════════════════════
        BENTO GRID (below hero)
     ══════════════════════ */
     .bento {
@@ -1333,6 +1673,7 @@
       <ul class="nav-links">
         <li><a href="#about">Tentang Saya</a></li>
         <li><a href="#skills">Kemahiran</a></li>
+        <li><a href="#projek-baru">Projek Baru</a></li>
         <li><a href="#projects">Projek</a></li>
                 <!-- <li><a href="#resources">Sumber</a></li> -->
         <li><a href="#contact">Hubungi</a></li>
@@ -1793,6 +2134,76 @@
 
     </div>
   </section>
+
+  <!-- ══════════════════════
+       PROJEK BARU — Agentic RPH
+  ══════════════════════ -->
+  <section class="proj-spotlight" id="projek-baru" aria-labelledby="proj-spot-title">
+    <div class="proj-spot-inner">
+      <div class="proj-spot-grid">
+        <div class="proj-spot-copy reveal">
+          <div class="proj-spot-eyebrow"><span class="proj-spot-dot" aria-hidden="true"></span> Projek Terbaru</div>
+          <h2 class="proj-spot-h2" id="proj-spot-title"><span class="proj-spot-h2-accent">Agentik RPH:</span> Pengurusan pengajaran dan RPH menggunakan teknologi agentic AI.</h2>
+          <p class="proj-spot-desc">Agentic AI mengikuti perkembangan murid dalam kelas dan memperhalusi pengajaran di setiap sesi pembelajaran. Projek ini dibina sebagai <strong>Projek Cadangan bagi Kursus Prestij 2026</strong>.</p>
+          <div class="proj-spot-stats">
+            <div class="proj-spot-stat">
+              <div class="proj-spot-stat-ico ps-ico-green" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div>
+                <div class="proj-spot-stat-num">450k+</div>
+                <div class="proj-spot-stat-lbl">Guru di seluruh Malaysia berpotensi memanfaatkannya kelak</div>
+              </div>
+            </div>
+            <div class="proj-spot-stat">
+              <div class="proj-spot-stat-ico ps-ico-blue" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <div class="proj-spot-stat-num">~45 → ~6 min</div>
+                <div class="proj-spot-stat-lbl">Anggaran masa menyediakan satu RPH (manual berbanding bantuan AI)</div>
+              </div>
+            </div>
+          </div>
+          <a href="https://agentic-rph.vercel.app/" target="_blank" rel="noopener noreferrer" class="proj-spot-cta">Papar Agentic RPH →</a>
+        </div>
+        <div class="proj-spot-visual reveal delay-1">
+          <div class="proj-spot-float-wrap">
+            <div class="proj-spot-pill proj-spot-pill--a" role="note">
+              <span class="proj-spot-pill-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
+              <span>Dibina untuk Program Prestij 2026</span>
+            </div>
+            <div class="proj-spot-pill proj-spot-pill--b" role="note">
+              <span class="proj-spot-pill-ico" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Gemini AI · aliran agentic untuk guru</span>
+            </div>
+            <div class="proj-spot-browser">
+              <div class="proj-spot-chrome-top">
+                <div class="proj-spot-traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="proj-spot-tab">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a14 14 0 0 1 0 20 14 14 0 0 1 0-20z"/></svg>
+                  Agentic RPH
+                </div>
+              </div>
+              <div class="proj-spot-url">
+                <svg class="proj-spot-url-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                <span>agentic-rph.vercel.app</span>
+              </div>
+              <img class="proj-spot-shot" src="assets/agentic-rph-screenshot.jpg" alt="Tangkapan skrin dashboard Agentic RPH: sidebar gelap, kad kelas, dan statistik murid." loading="lazy" decoding="async" />
+              <div class="proj-spot-chrome-foot">
+                <span class="proj-spot-foot-pill">~6 min / RPH</span>
+                <span class="proj-spot-foot-store">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                  Live di Vercel
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════════════════════
        §7 PROJECTS
   ══════════════════════ -->
@@ -2450,6 +2861,7 @@
           <div class="footer-links">
             <a href="#about" class="footer-link">Tentang Saya</a>
             <a href="#skills" class="footer-link">Kemahiran</a>
+            <a href="#projek-baru" class="footer-link">Projek Baru</a>
             <a href="#projects" class="footer-link">Projek</a>
             <!-- <a href="#resources" class="footer-link">Sumber</a> -->
                         <a href="#contact" class="footer-link">Hubungi</a>
