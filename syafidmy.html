@@ -1019,6 +1019,66 @@
     .mock-tp-bar-fill { height: 100%; border-radius: 99px; }
     .mock-tp-pct { font-family: var(--mono); font-size: .5rem; color: var(--ink-light); width: 18px; text-align: right; flex-shrink: 0; }
 
+    /* Dashboard mockup — Agentic RPH */
+    .mock-rph {
+      width: 100%; max-width: 300px; background: #0a0c14; border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px; overflow: hidden; box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+      display: flex; font-size: .58rem;
+    }
+    .mock-rph-sidebar {
+      width: 74px; flex-shrink: 0; background: linear-gradient(180deg, #14182b 0%, #0e1220 100%);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      padding: .5rem .38rem; display: flex; flex-direction: column; gap: .15rem;
+    }
+    .mock-rph-brand { display: flex; align-items: flex-start; gap: .28rem; padding-bottom: .35rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08); margin-bottom: .2rem; }
+    .mock-rph-ai {
+      width: 14px; height: 14px; border-radius: 5px; flex-shrink: 0;
+      background: linear-gradient(135deg, #a78bfa, #6366f1);
+    }
+    .mock-rph-logo-text { font-weight: 800; font-size: .52rem; color: #f1f5f9; letter-spacing: -.02em; line-height: 1.15; }
+    .mock-rph-prestij {
+      font-family: var(--mono); font-size: .36rem; padding: .1rem .3rem; border-radius: 99px;
+      background: rgba(139, 92, 246, 0.28); color: #ddd6fe; letter-spacing: .05em; margin-top: .18rem; display: inline-block;
+    }
+    .mock-rph-user { font-size: .44rem; color: rgba(226, 232, 240, 0.45); line-height: 1.3; margin-bottom: .3rem; }
+    .mock-rph-nav-lbl { font-family: var(--mono); font-size: .36rem; color: rgba(255, 255, 255, 0.28); letter-spacing: .07em; padding: .2rem .15rem .08rem; }
+    .mock-rph-nav {
+      padding: .24rem .38rem; border-radius: 5px; color: rgba(226, 232, 240, 0.45); font-size: .5rem; font-weight: 500;
+    }
+    .mock-rph-nav.active { background: rgba(139, 92, 246, 0.35); color: #faf5ff; }
+    .mock-rph-main { flex: 1; padding: .55rem .5rem; display: flex; flex-direction: column; gap: .38rem; background: #080a12; }
+    .mock-rph-top-pill {
+      align-self: center; font-family: var(--mono); font-size: .4rem; padding: .12rem .45rem; border-radius: 99px;
+      background: rgba(139, 92, 246, 0.22); color: #e9d5ff; letter-spacing: .06em;
+    }
+    .mock-rph-greet { font-weight: 800; font-size: .7rem; color: #f8fafc; letter-spacing: -.03em; line-height: 1.2; text-align: center; }
+    .mock-rph-greet span {
+      background: linear-gradient(92deg, #c4b5fd, #93c5fd); -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .mock-rph-sub { text-align: center; font-size: .46rem; color: rgba(226, 232, 240, 0.4); margin-top: -.15rem; }
+    .mock-rph-stats { display: flex; gap: .3rem; }
+    .mock-rph-stat {
+      flex: 1; text-align: center; padding: .32rem .2rem; border-radius: 7px;
+      background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .mock-rph-stat-num { font-weight: 800; font-size: .78rem; color: #f1f5f9; letter-spacing: -.03em; line-height: 1; }
+    .mock-rph-stat-lbl { font-family: var(--mono); font-size: .38rem; color: rgba(226, 232, 240, 0.38); margin-top: .12rem; }
+    .mock-rph-kelas { font-family: var(--mono); font-size: .4rem; color: rgba(255, 255, 255, 0.32); letter-spacing: .08em; }
+    .mock-rph-class {
+      border-radius: 7px; padding: .4rem .45rem; background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .mock-rph-class-h { display: flex; justify-content: space-between; align-items: center; margin-bottom: .2rem; }
+    .mock-rph-year { font-family: var(--mono); font-size: .38rem; padding: .1rem .32rem; border-radius: 99px; background: rgba(99, 102, 241, 0.25); color: #c7d2fe; }
+    .mock-rph-class-name { font-weight: 700; font-size: .58rem; color: #f1f5f9; }
+    .mock-rph-class-meta { font-size: .44rem; color: rgba(226, 232, 240, 0.42); margin-top: .12rem; }
+    .mock-rph-bar { display: flex; height: 3px; border-radius: 99px; overflow: hidden; margin-top: .28rem; gap: 1px; }
+    .mock-rph-bar span:nth-child(1) { flex: 3; background: #22c55e; }
+    .mock-rph-bar span:nth-child(2) { flex: 3; background: #3b82f6; }
+    .mock-rph-bar span:nth-child(3) { flex: 1; background: #ef4444; }
+    .mock-rph-foot { display: flex; justify-content: space-between; align-items: center; margin-top: .28rem; font-size: .44rem; color: rgba(226, 232, 240, 0.45); }
+    .mock-rph-cta { color: #a78bfa; font-weight: 600; }
+
     /* ══════════════════════
        RESOURCES (§8)
     ══════════════════════ */
@@ -1740,7 +1800,7 @@
     <div class="projects-v2-header reveal">
       <div class="section-eyebrow">PROJEK SEMASA</div>
       <h2 class="projects-v2-h2">Apps yang sedang<br>dibangunkan</h2>
-      <p class="projects-v2-sub">Dua platform web yang dibina sendiri dan digunakan harian oleh guru dan murid sekolah Malaysia.</p>
+      <p class="projects-v2-sub">Tiga platform web yang dibina sendiri untuk pentadbiran sekolah, PBD, dan bantuan RPH — digunakan harian oleh guru di sekolah Malaysia.</p>
     </div>
 
     <div class="res-list">
@@ -1818,8 +1878,77 @@
         </div>
       </div>
 
-      <!-- Card 2: TransitPBD -->
+      <!-- Card 2: Agentic RPH -->
       <div class="res-card reveal delay-2">
+        <div class="res-left">
+          <div class="res-tags">
+            <span class="res-tag res-tag-type">WEB APP</span>
+            <span class="res-tag res-tag-type" style="background:#1e1b4b;">NEXT.JS</span>
+            <span class="res-tag res-tag-type" style="background:#4c1d95;">GEMINI AI</span>
+            <span class="res-tag res-tag-free">SIAP</span>
+          </div>
+          <div class="res-head">
+            <div class="res-logo" style="background:#ede9fe;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#5b21b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
+            <div>
+              <div class="res-name">Agentic RPH</div>
+              <div class="res-tagline">Dashboard guru untuk jana RPH dan pantau kelas — tema PRESTIJ 2026</div>
+            </div>
+          </div>
+          <p class="res-desc">Aplikasi web untuk guru: ringkasan kelas &amp; murid, kemajuan mata pelajaran, dan aliran jana Rencana Pengajaran Harian dengan bantuan AI (Gemini). Antara muka gelap moden, disesuaikan untuk kerja harian di sekolah.</p>
+          <div class="res-features">
+            <span class="res-feat"><span class="res-feat-check">✓</span> Dashboard kelas &amp; statistik</span>
+            <span class="res-feat"><span class="res-feat-check">✓</span> Jana RPH dengan AI</span>
+            <span class="res-feat"><span class="res-feat-check">✓</span> Profil sekolah &amp; navigasi panduan</span>
+            <span class="res-feat"><span class="res-feat-check">✓</span> PRESTIJ 2026 &amp; tema intervensi</span>
+            <span class="res-feat"><span class="res-feat-check">✓</span> Responsif untuk desktop &amp; tablet</span>
+          </div>
+          <div class="res-audience">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            Guru &amp; pentadbir — sekolah rendah / menengah Malaysia
+          </div>
+          <a href="https://agentic-rph.vercel.app" target="_blank" rel="noopener noreferrer" class="res-cta-btn">→ Lihat Agentic RPH</a>
+        </div>
+        <div class="res-right">
+          <div class="mock-rph">
+            <div class="mock-rph-sidebar">
+              <div class="mock-rph-brand">
+                <div>
+                  <div style="display:flex;align-items:center;gap:.25rem;"><div class="mock-rph-ai" aria-hidden="true"></div><div class="mock-rph-logo-text">Agentic RPH</div></div>
+                  <div class="mock-rph-prestij">PRESTIJ 2026</div>
+                </div>
+              </div>
+              <div class="mock-rph-user">Cikgu Syafid<br/>SK Putrajaya P17(1)</div>
+              <div class="mock-rph-nav-lbl">NAVIGASI</div>
+              <div class="mock-rph-nav active">Dashboard</div>
+              <div class="mock-rph-nav">Panduan</div>
+              <div class="mock-rph-nav">Tentang</div>
+            </div>
+            <div class="mock-rph-main">
+              <div class="mock-rph-top-pill">PRESTIJ 2026</div>
+              <div class="mock-rph-greet">Selamat datang,<br/><span>Cikgu Syafid</span></div>
+              <div class="mock-rph-sub">SK Putrajaya Presint 17 (1)</div>
+              <div class="mock-rph-stats">
+                <div class="mock-rph-stat"><div class="mock-rph-stat-num">6</div><div class="mock-rph-stat-lbl">KELAS</div></div>
+                <div class="mock-rph-stat"><div class="mock-rph-stat-num">195</div><div class="mock-rph-stat-lbl">MURID</div></div>
+                <div class="mock-rph-stat"><div class="mock-rph-stat-num" style="font-size:.58rem;">Sains</div><div class="mock-rph-stat-lbl">SUBJEK</div></div>
+              </div>
+              <div class="mock-rph-kelas">KELAS SAYA</div>
+              <div class="mock-rph-class">
+                <div class="mock-rph-class-h">
+                  <span class="mock-rph-year">Tahun 6</span>
+                </div>
+                <div class="mock-rph-class-name">6 Crystal</div>
+                <div class="mock-rph-class-meta">Sains · Tajuk semasa</div>
+                <div class="mock-rph-bar" aria-hidden="true"><span></span><span></span><span></span></div>
+                <div class="mock-rph-foot"><span>32 murid</span><span class="mock-rph-cta">Jana RPH →</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: TransitPBD -->
+      <div class="res-card reveal delay-3">
         <div class="res-left">
           <div class="res-tags">
             <span class="res-tag res-tag-type">WEB APP</span>
@@ -2331,6 +2460,7 @@
           <div class="footer-col-title">VENTURE</div>
           <div class="footer-links">
             <a href="https://sekolahhub.vercel.app/" target="_blank" class="footer-link">SekolahHub</a>
+            <a href="https://agentic-rph.vercel.app" target="_blank" rel="noopener noreferrer" class="footer-link">Agentic RPH</a>
             <a href="https://transitpbd.vercel.app/dashboard" target="_blank" class="footer-link">TransitPBD</a>
           </div>
         </div>
