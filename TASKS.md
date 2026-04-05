@@ -1,8 +1,9 @@
 # TASKS — syafidmy Portfolio
 
 ## Status Semasa
-File utama: `syafidmy.html` (akan deploy ke Vercel)
-Assets: `assets/` (syafid_ipad.png, syafid_bento.png)
+
+- File utama: `syafidmy.html` (deploy ke Vercel; `vercel.json` rewrite `/` → `/syafidmy.html`)
+- Folder `assets/` (cth. imej hero/bento) **belum ada dalam repo** — tambah bila sedia, kemudian rujuk dalam HTML jika perlu
 
 ---
 
@@ -10,11 +11,9 @@ Assets: `assets/` (syafid_ipad.png, syafid_bento.png)
 
 - [x] Hero section + bento grid
 - [x] About Me + orbit badges
-- [x] Kemahiran & Kepakaran — redesign Option C (3 featured cards + tag cloud + animations)
-- [x] Projek section (proj-card layout)
-- [x] Sumber & Tools — card layout baru (hidden buat masa ini)
-- [x] Testimonials section
-- [x] Blog / Konten section
+- [x] Kemahiran & Kepakaran — Option C (3 featured cards + tag cloud + animations)
+- [x] Projek section (layout kad sama seperti Sumber; SekolahHub & TransitPBD ada pautan live pada CTA utama)
+- [x] Sumber & Tools — markup & CSS (card layout); **disembunyikan** (`display:none` pada `<section id="resources">`) buat masa ini
 - [x] Contact section
 - [x] Footer
 - [x] Scroll reveal animations (IntersectionObserver)
@@ -24,23 +23,31 @@ Assets: `assets/` (syafid_ipad.png, syafid_bento.png)
 
 ## 🔧 Pending / TODO
 
+### Testimonials & Blog / Konten
+
+- [ ] Dalam `syafidmy.html` hanya ada **CSS** untuk `.testimonials` dan `.blog` — **tiada markup `<section>`** untuk dua bahagian ini. Pilih salah satu: **(A)** padam CSS tidak terpakai, atau **(B)** tambah semula HTML mengikut reka bentuk sedia ada
+
 ### Sumber & Tools (§8) — hidden, aktifkan bila ready
+
 - [ ] Aktifkan semula: buang `style="display:none"` pada `<section class="resources">`
 - [ ] Aktifkan semula nav link: uncomment `<!-- <li><a href="#resources">Sumber</a></li> -->`
 - [ ] Aktifkan semula footer link: uncomment `<!-- <a href="#resources" ...>Sumber</a> -->`
 - [ ] Isi URL sebenar pada semua `href="#"` dalam kad sumber
 
-### Projek — isi kandungan sebenar
-- [ ] Tambah URL sebenar untuk setiap projek (Lihat Lanjut / GitHub)
-- [ ] Tambah screenshot / mockup sebenar (ganti placeholder emoji)
+### Projek — kandungan tambahan
+
+- [ ] Tambah pautan sekunder jika ada (cth. GitHub) — CTA utama dua projek sudah ke URL live
+- [ ] Tambah screenshot / mockup sebenar (ganti placeholder emoji pada kad jika mahu)
 
 ### Deploy ke Vercel
-- [ ] Setup repo GitHub untuk folder `syafidmy/`
+
+- [ ] Setup repo GitHub untuk folder `syafidmy/` (jika belum)
 - [ ] Connect ke Vercel, set root directory
 - [ ] Test semua section pada mobile
-- [ ] Test semua anchor links (#about, #skills, #projects, #contact)
+- [ ] Test anchor links: `#about`, `#skills`, `#projects`, `#contact` (dan `#resources` selepas diaktifkan)
 
 ### Nice-to-have
+
 - [ ] Dark mode toggle
 - [ ] OG meta tags (og:title, og:image, og:description) untuk social sharing
 - [ ] Favicon
