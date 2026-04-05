@@ -3,21 +3,31 @@
 ## Status Semasa
 
 - File utama: `syafidmy.html` (deploy ke Vercel; `vercel.json` rewrite `/` → `/syafidmy.html`)
-- Folder `assets/` (cth. imej hero/bento) **belum ada dalam repo** — tambah bila sedia, kemudian rujuk dalam HTML jika perlu
+- Folder **`assets/`** dalam repo: `syafid_bento.png`, `syafid_ipad.png`, `agentic-rph-screenshot.jpg`, `chef-5-minit-screenshot.jpg`
+- Git `main` disegerakkan ke GitHub (`oyendevlab/syafidmy`) — commit terakhir termasuk spotlight + Chef 5 Minit (sahkan dengan `git log`)
+
+### Nota kemajuan (sambungan 5 Apr 2026)
+
+- **About — orbit pills:** jejari `cqw`, susunan jam (12h/2h/4h/6h/9h), `orbit-float` + `orbit-drift` (tiada “lari” pusat→tepi), pill satu kapsul + hover shine; reduced motion dihormati.
+- **Bento kuning:** memoji `assets/syafid_bento.png`.
+- **Projek Semasa (`#projects`):** urutan kad — SekolahHub → Agentic RPH → TransitPBD → **Chef 5 Minit** (SIAP, Cloud Run, screenshot); intro dikemas ke *empat aplikasi*; footer VENTURE lengkap.
+- **Projek Baru (`#projek-baru`):** selepas Kemahiran — hero gelap, mock macOS + screenshot Agentic RPH, stat, CTA; pill pastel + jarak; teks *Projek Terbaru* / *Papar Agentic RPH →*.
+- **Nav/footer:** pautan `#projek-baru`, pautan apps (termasuk Chef 5 Minit).
 
 ---
 
 ## ✅ Siap
 
 - [x] Hero section + bento grid
-- [x] About Me + orbit badges
+- [x] About Me + orbit badges (susunan & animasi dikemas; memoji bento)
 - [x] Kemahiran & Kepakaran — Option C (3 featured cards + tag cloud + animations)
-- [x] Projek section (layout kad sama seperti Sumber; SekolahHub & TransitPBD ada pautan live pada CTA utama)
+- [x] **Projek Baru** — spotlight Agentic RPH (`#projek-baru`, selepas Kemahiran)
+- [x] Projek section — kad: SekolahHub, Agentic RPH, TransitPBD, **Chef 5 Minit** (pautan live + mock/screenshot)
 - [x] Sumber & Tools — markup & CSS (card layout); **disembunyikan** (`display:none` pada `<section id="resources">`) buat masa ini
 - [x] Contact section
-- [x] Footer
+- [x] Footer (+ VENTURE links)
 - [x] Scroll reveal animations (IntersectionObserver)
-- [x] Nav scroll effect
+- [x] Nav scroll effect (+ Projek Baru dalam nav)
 
 ---
 
@@ -36,15 +46,15 @@
 
 ### Projek — kandungan tambahan
 
-- [ ] Tambah pautan sekunder jika ada (cth. GitHub) — CTA utama dua projek sudah ke URL live
-- [ ] Tambah screenshot / mockup sebenar (ganti placeholder emoji pada kad jika mahu)
+- [ ] Tambah pautan sekunder jika ada (cth. GitHub) — CTA utama ke URL live untuk semua kad utama
+- [ ] Semak / naik taraf screenshot jika ada versi UI baharu (Agentic RPH, Chef 5 Minit)
 
 ### Deploy ke Vercel
 
 - [ ] Setup repo GitHub untuk folder `syafidmy/` (jika belum)
 - [ ] Connect ke Vercel, set root directory
 - [ ] Test semua section pada mobile
-- [ ] Test anchor links: `#about`, `#skills`, `#projects`, `#contact` (dan `#resources` selepas diaktifkan)
+- [ ] Test anchor links: `#about`, `#skills`, `#projek-baru`, `#projects`, `#contact` (dan `#resources` selepas diaktifkan)
 
 ### Nice-to-have
 
